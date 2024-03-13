@@ -24,12 +24,12 @@
     /* font-weight: 600; */
     color: #068944;
     text-transform: uppercase;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 .blog-section .title p{
     padding: 30px;
     font-size: 18px;
-    margin-top: 20px;
+    /* margin-top: 10px; */
     color: #050505;
 }
 .cards{
