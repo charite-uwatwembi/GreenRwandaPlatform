@@ -1,0 +1,256 @@
+/* Updated CSS to move the navbar to the left */
+.nav-bars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0; /* Updated to align the navbar to the left */
+  width: 100%;
+  background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar img {
+  max-height: 60px;
+}
+.navbarUl{
+  margin-left: 900px;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  /* margin-bottom: 100px; */
+ 
+}
+
+.navbar li {
+  margin-right: 15px;
+  margin-top: -30px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+}
+.navbar a:hover{
+  /* border-bottom: .2rem solid #4caf50; */
+ 
+}
+
+
+/*footer*/
+.contact_page{
+  background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.702),rgb(60, 60, 60));
+  padding-top: 50px;
+ 
+}
+.contact_section{
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  /* flex-wrap: wrap; */
+  color: white;
+
+}
+.myaddress {
+  margin-top: -20px; /* Adjust the top margin as needed */
+}
+
+.myaddress p {
+  font-size: smaller;
+  padding-left: 80px;
+  margin: 25px 0; /* Adjust the vertical margin within each paragraph */
+}
+
+.msg_section{
+  width: 60%;
+}
+.myaddress{
+  font-size: 19px;
+  padding-top: 40px;
+}
+.myinput input{
+  width: 200px;
+  outline: none; 
+  
+}
+.myinput input::placeholder,.mytextarea textarea::placeholder{
+  color: rgba(255, 255, 255, 0.484);
+}
+.myinput{
+  margin-right: 30px;
+}
+.myerror {
+  visibility: hidden;
+  padding-top: 5px;
+  color: #fa4b63;
+}
+.mytextarea textarea,.myinput input{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.406);
+  color: rgba(238, 238, 238, 0.894);
+  padding: 5px;
+  font-size: 15px;
+}
+.contact_title{
+  font-size: 27px;
+}
+.submit_btn button{
+  width: 200px;
+  transition: all 0.4s;
+  padding: 10px 0;
+  color: rgba(255, 255, 255, 0.321);
+  font-size: 16px;
+  background-color: #1faa50;
+  border: none;
+  border-radius: 40px;
+  margin: 20px 0;
+}
+.submit_btn button:hover{
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  color: #1faa50;
+  background: rgb(10, 109, 10);
+  transform: scale(1.1);
+} 
+
+.copyright_section {
+  
+  text-align: center; 
+  margin-top: 20px; 
+  color: white; 
+}
+
+.copyright_section p {
+  /* padding-right: 100px; */
+  font-size:smaller;
+  text-align: left;
+  padding-right: -20px 10;
+  
+  margin: 40px 0; /* Adjust vertical margin within the copyright paragraph */
+}
+.arrows{
+  display:flex;
+  width:100%;
+  align-items:center;
+  justify-content: flex-end;
+  transition: none;
+  scroll-behavior: smooth;
+ 
+}
+
+/* Style for both buttons */
+#prevBtn, #nextBtn {
+  background-color: #4CAF50; /* Green background */
+  border: none; /* Remove default border */
+  color: white; /* White text */
+  padding: 10px 30px; /* Padding around text */
+  text-align: center; /* Center the text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Display as inline-block */
+  font-size: 16px; /* Font size */
+  margin: 4px 2px; /* Margin around buttons */
+  cursor: pointer; /* Cursor pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+ }
+ 
+ /* Hover effect for buttons */
+ #prevBtn:hover, #nextBtn:hover {
+  background-color: #0d7b12; /* Darker green on hover */
+ }
+ 
+ /* Disabled state for buttons */
+ #prevBtn:disabled, #nextBtn:disabled {
+  background-color: #ccc; /* Gray background */
+  cursor: not-allowed; /* Cursor not-allowed on hover */
+ }
+ .button-container {
+  display: flex; /* Use Flexbox */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  gap: 100px; /* Optional: Add some space between the buttons */
+  padding-top: 10px;
+ }
+ 
+
+ /*job*/
+ .jobs-list-container{
+  margin: 0px;
+    padding: 0px;
+  background-color: #eeecec;
+  /* padding-left: 200px; */
+  /* width: 100px; */
+  /* padding-right: 50px; */
+ }
+ .jobs-list-container .jobs {
+  display: grid; /* Use CSS Grid */
+  grid-template-columns: repeat(4, 1fr); /* Create 4 equal-width columns */
+  gap: 20px; /* Space between the cards */
+  padding: 20px; /* Padding around the grid */
+  width: 100%; /* Ensure the grid takes up the full width of its container */
+ }
+ .jobs-list-container .jobs .job {
+  background-color: #f9f9f9; /* Light background color */
+  padding: 20px; /* Padding inside the card */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 24px -8px #025f2e; /* Subtle shadow for depth */
+ }
+  
+ .jobs-list-container h2{
+  font-size: 30px;
+  text-align: left;
+  color: #050505;
+  margin-left: 20px;
+ }
+ .jobs-list-container h4{
+  font-size: 25px;
+  /* font-weight: 700; */
+  margin-bottom: 10px;
+  text-align: center;
+  color: #068944;
+  padding-top: 40px;
+  
+  
+}
+
+.jobs-list-container .job-search {
+  width: 30%;
+  padding: 10px 24px;
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+  box-sizing: border-box;
+  border: 1px solid #333;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+
+.jobs-list-container p {
+  font-size: 18px; /* Adjust the font size */
+  color: #040404; /* Set the text color */
+  margin-top: 20px; /* Add some space above the paragraph */
+  text-align: center; /* Center the text */
+  margin-bottom: 20px;
+ }
+ 
+ a {
+  color: #09bf52; /* Set the link color */
+  text-decoration: underline; /* Remove the underline */
+  font-weight: bold; /* Make the link text bold */
+ }
+ 
+ a:hover {
+  color: #0fa50c; /* Change the link color on hover */
+  text-decoration: underline; /* Add an underline on hover */
+ }
+ 
+
+ 

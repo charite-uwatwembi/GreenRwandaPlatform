@@ -1,0 +1,57 @@
+.contact_page{
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.702),rgb(60, 60, 60));
+    padding-top: 50px;
+   
+}
+.contact_section{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+  
+}
+.msg_section{
+    width: 60%;
+}
+.myaddress{
+    font-size: 19px;
+    padding-top: 40px;
+}
+.myinput input{
+    width: 200px;
+    outline: none; 
+    
+}
+.myinput input::placeholder,.mytextarea textarea::placeholder{
+    color: rgba(255, 255, 255, 0.484);
+}
+.myinput{
+    margin-right: 30px;
+}
+.myerror {
+    visibility: hidden;
+    padding-top: 5px;
+    color: #fa4b63;
+  }
+.mytextarea textarea,.myinput input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.406);
+    color: rgba(238, 238, 238, 0.894);
+    padding: 5px;
+    font-size: 15px;
+}
+.contact_title{
+    font-size: 27px;
+}
+.submit_btn button{
+    width: 200px;
+    transition: all 0.4s;
+    padding: 10px 0;
+    color: rgba(255, 255, 255, 0.321);
+    font-size: 16px;
+    background-color: #fa4b622e;
+    border: none;
+    border-radius: 40px;
+    margin: 20px 0;
+}

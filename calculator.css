@@ -1,0 +1,135 @@
+/* General container styling */
+.calc-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    justify-content: center; /* Center the content vertically */
+    height: 70vh; /* Full viewport height */
+    /* padding: 5px; Add some padding around the container */
+    background-color: #b6b1b137;;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/*select*/
+
+/* Style the select input */
+#country_input {
+    width: 100%; /* Full width */
+    padding: 5px; /* Add some padding */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Adjust font size */
+    background-color: #f9f9f9; /* Light grey background */
+    color: #333; /* Dark grey text */
+    appearance: none; /* Remove default browser styling */
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none; /* For Firefox */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Change the cursor to pointer when hovering over the select input */
+#country_input:hover {
+    cursor: pointer;
+}
+
+/* Add a focus style for better accessibility */
+#country_input:focus {
+    outline: none; /* Remove default outline */
+    border-color: #4CAF50; /* Green border on focus */
+    box-shadow:#08ea14; /* Green shadow on focus */
+}
+
+
+/* Style the h1 to be centered at the top */
+.calc-container h1 {
+    width: 100%; /* Full width of the container */
+    text-align: center; /* Center the text */
+    margin-bottom: 20px; /* Add some space below the h1 */
+}
+
+/* Style the row to contain the columns */
+.row {
+    display: flex;
+    justify-content: space-around; /* Distribute the columns evenly */
+    width: 100%; /* Full width of the container */
+    padding: 20px; /* Add some padding around the row */
+}
+
+/* Style the columns to be parallel and of equal width */
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    justify-content: space-around; /* Distribute the content evenly */
+    width: 45%; /* Adjust the width to make them parallel and of equal width */
+    height: 50%; /* Half the height of the container */
+    padding: 20px; /* Add some padding around the columns */
+}
+
+/* Style the sliders for better appearance */
+.slider {
+    width: 80%; /* Adjust the width as needed */
+}
+
+/* Style the select input for better appearance */
+#country_input {
+    width: 30%; /* Adjust the width as needed */
+    margin-bottom: 20px; /* Add some space below the select input */
+}
+
+
+/* Style the button */
+#calculate_button {
+    background-color: #4CAF50; /* Green background */
+    border: none; /* No border */
+    color: white; /* White text */
+    padding: 15px 30px; /* Padding around the text */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* No underline */
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-left:20px;
+    /* margin: 4px 2px; */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Change the button color on hover */
+#calculate_button:hover {
+    background-color: #45a049;
+    
+}
+
+/* Style the results container */
+#results {
+    display: none; /* Initially hidden */
+    background-color: #b6b1b137;; /* Light grey background */
+    margin: 20px auto; /* Center the container */
+    padding: 20px; /* Padding around the content */
+    border-radius: 4px; /* Rounded corners */
+    width: 80%; /* Set a width */
+    box-shadow: 0 4px 8px 0 rgba(21, 203, 75, 0.2); /* Shadow for depth */
+}
+
+/* Style the h1 in the results section */
+#results h1 {
+    text-align: center; /* Center the text */
+    margin-bottom: 20px; /* Add some space below the h1 */
+}
+
+/* Style the info and success sections */
+.info, .success {
+    margin-bottom: 20px; /* Add some space below the sections */
+}
+
+/* Style the paragraphs in the info section */
+#results .info p {
+    margin-bottom: 10px; /* Add some space below each paragraph */
+}
+
+/* Style the warning paragraph */
+.warning {
+    color: #888; /* Light grey text */
+    font-size: 0.9em; /* Smaller font size */
+}

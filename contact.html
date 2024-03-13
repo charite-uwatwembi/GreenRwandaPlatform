@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contact_page mypadding" id="mycontact_page">
+        <div class="myone pt_20 pb_20">
+            <div class="contact_section">
+    
+    
+                <div class="myaddress myfont_family">
+                    <div class="pt_20">
+                        <div>
+                            <p><span class="myorange">Phone:</span></p>
+                        </div>
+                        <div>
+                            <p>+250 78 995 1 064</p>
+                        </div>
+                    </div>
+                    <div class="pt_20">
+                        <div>
+                            <p><span class="myorange">Address:</span></p>
+                        </div>
+                        <div>
+                            <p>Kigali, Rwanda</p>
+                        </div>
+                    </div>
+                    <div class="pt_20">
+                        <div>
+                            <p><span class="myorange">Email:</p>
+                        </div>
+                        <div>
+                            <p>c.uwatwembi@alustudent.com</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="msg_section pb_50">
+                    <div class="myfont_family contact_title">
+                        <p>Contact Me</p>
+                    </div>
+                    <div>
+                        <form action="#">
+                            <div class="input_area myflex pb_10">
+                                <div class="myinput pt_20 pb_10">
+                                    <div class="myerror" id="name_error">
+                                        <p><b>*Name too short !</b></p>
+                                    </div>
+                                    <div>
+                                        <input type="text" class='info' data-err="error"  data-myborder="" placeholder="Name" id="client_name" onkeyup="msg_val('name_error','client_name')" onchange="msg_val('name_error','client_name')">
+                                    </div>
+                                   
+                                </div>
+                                <div class="myinput pt_20 pb_10" >
+                                    <div class="myerror" id="email_error">
+                                        <p><b>Invalid Email !</b></p>
+                                    </div>
+                                    <div>
+                                        <input type="text" class='info' data-err="error" data-myborder="" placeholder="Email" id="client_email" onkeyup="email_val('client_email','email_error')" onchange="email_val('client_email','email_error')" required>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                            <div class="mytextarea">
+                                <div class="myerror" id="msg_error">
+                                    <p><b>Message too short !</b></p>
+                                </div>
+                                <div>
+                                    <textarea name="" class='info' data-myborder="error" data-err="error" id="client_msg" cols="45" rows="6" placeholder="Message" onkeyup="msg_val('msg_error','client_msg')" ></textarea>
+                                </div>
+                                
+        
+                            </div>
+                            <div class="submit_btn" id="now">
+                                <button  id="mysubmit">Submit</button>
+                            </div>
+                        </form>
+            </div>
+        </div>
+    
+            
+    </div>
+</body>
+</html>

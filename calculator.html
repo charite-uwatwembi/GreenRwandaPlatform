@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+    
+</head>
+<body>
+    <div class="calc-container">
+        <h1>Carbon Footprint Calculator</h1>
+        <h2>🌍 Country</h2>
+        <select id="country_input">
+            <option value="Rwanda">Rwanda</option>
+            <option selected="selected" value="">select country</option>
+        </select>
+        <div class="row">
+            <div class="column">
+                <h2>🚗 Daily commute distance (in km)</h2>
+                <input type="range" min="0" max="100" value="0" class="slider" id="distance_input">
+                <div class="slider-value">0</div>
+                <h2>💡 Monthly electricity consumption (in kWh)</h2>
+                <input type="range" min="0" max="1000" value="0" class="slider" id="electricity_input">
+                <div class="slider-value">0</div>
+            </div>
+            <div class="column">
+                <h2>🗑️ Waste generated per week (in kg)</h2>
+                <input type="range" min="0" max="100" value="0" class="slider" id="waste_input">
+                <div class="slider-value">0</div>
+                <h2>🍽️ Number of meals per day</h2>
+                <input type="number" min="0" value="0" id="meals_input">
+            </div>
+        </div>
+    </div>
+
+    <button id="calculate_button">Calculate CO2 Emissions</button>
+    <div id="results" style="display: none;">
+        <h1>Results</h1>
+        <div class="info">
+            <h2>Carbon Emissions by Category</h2>
+            <p id="transportation_emissions">🚗 Transportation:</p>
+            <p id="electricity_emissions">💡 Electricity:</p>
+            <p id="diet_emissions">🍽️ Diet:</p>
+            <p id="waste_emissions">🗑️ Waste:</p>
+        </div>
+        <div class="success">
+            <h2>Total Carbon Footprint</h2>
+            <p id="total_emissions">🌍 Your total carbon footprint is:</p>
+            <p class="warning">In 2021, CO2 emissions per capita for Rwanda was 0.09 tons of CO2 per capita. Though Rwanda CO2 emissions per capita fluctuated substantially in recent years, it tended to increase through 1972 - 2021 period ending at 0.09 tons of CO2 per capita in 2021.</p>
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
