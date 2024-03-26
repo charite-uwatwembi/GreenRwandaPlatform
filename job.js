@@ -16,6 +16,14 @@ const jobs = [
       openPositions: "3",
       link: "#",
     },
+    {
+      title: "Environmental Scientist",
+      image: "images/data-solid-60.png",
+      details:
+        "Research and analyze environmental issues, including the impact of climate change, and propose sustainable solutions.",
+      openPositions: "3",
+      link: "#",
+    },
   
     {
       title: "Sustainable Agriculture Specialist",
@@ -93,7 +101,8 @@ const jobs = [
   const createJobListingCards = () => {
     jobsContainer.innerHTML = "";
   
-    jobs.forEach((job) => {
+    jobs.forEach((job, index) => {
+      if (index > 7 )  return;
       if (job.title.toLowerCase().includes(searchTerm.toLowerCase())) {
         let jobCard = document.createElement("div");
         jobCard.classList.add("job");

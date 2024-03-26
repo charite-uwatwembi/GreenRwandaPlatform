@@ -1,0 +1,18 @@
+{
+  "name": "greenrwandaplatform",
+  "version": "1.0.0",
+  "description": "Welcome to GreenRwanda, your comprehensive online platform dedicated to fostering positive change and sustainability. This README file provides an overview of the key features and functionalities of our platform.",
+  "main": "blog.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.3",
+    "mongoose": "^8.2.3",
+    "nodemon": "^3.1.0"
+  }
+}

@@ -35,7 +35,7 @@
 }
 .heading p{
     font-size: 18px;
-    color: #666;
+    color: #050505;
     margin-bottom: 35px;
 
 }
@@ -74,13 +74,14 @@
 }
 .about-content h2{
     font-size: 23px;
-    color:#333;
+    color: #050505;
     margin-bottom: 15px;
 }
 .about-content p{
-    font-size: 18px;
+    font-size: 15px;
     line-height: 1.5;
-    color: #666;
+    
+    color: #050505;
 }
 .about-content .read-more{
     display: inline-block;
@@ -123,6 +124,7 @@
     .about content p{
         padding:0px;
         font-size: 16px;
+        
     }
     .about-content .read-more{
         font-size: 16px;
