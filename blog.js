@@ -1,55 +1,39 @@
-let cardsContainer = document.querySelector('.cards');
+let cardsContainer = document.querySelector('.cards-container');
 let prevBtn = document.getElementById('prevBtn');
 let nextBtn = document.getElementById('nextBtn');
-let currentSlide = 0; // Start at the first slide
-let numberOfSlides = document.querySelectorAll('.card').length;
+let currentPage = 0; // Start at the first page
+let cardsPerPage = 3;
 
-// Function to slide to a specific slide
-function slideTo(slideIndex) {
-    // Ensure the slide index is within bounds
-    if (slideIndex < 0) {
-        slideIndex = 0;
-    } else if (slideIndex >= numberOfSlides) {
-        slideIndex = numberOfSlides - 1;
-    }
+// Function to display cards based on the current page
+function showPage(pageIndex) {
+    let startIndex = pageIndex * cardsPerPage;
+    let endIndex = startIndex + cardsPerPage;
 
-    // Update the current slide
-    currentSlide = slideIndex;
-
-    // Calculate the width of a single card dynamically
-    let cardWidth = document.querySelector('.card').offsetWidth;
-
-    // Update the transform property to slide the cards
-    cardsContainer.style.transform = `translateX(-${slideIndex * cardWidth}px)`;
-
-    // Update the indicators (if you have them)
-    updateIndicators(currentSlide);
-
-    // Disable/enable buttons based on the current slide
-    prevBtn.disabled = currentSlide === 0;
-    nextBtn.disabled = currentSlide === numberOfSlides - 1;
-}
-
-// Event listeners for the navigation buttons
-prevBtn.addEventListener('click', function() {
-    slideTo(currentSlide - 1); // Go to the previous slide
-});
-
-nextBtn.addEventListener('click', function() {
-    slideTo(currentSlide + 1); // Go to the next slide
-});
-
-// Function to update indicators
-function updateIndicators(currentSlide) {
-    let indicators = document.querySelectorAll('.indicator');
-    indicators.forEach((indicator, index) => {
-        if (index === currentSlide) {
-            indicator.classList.add('active');
+    let cards = document.querySelectorAll('.card');
+    cards.forEach((card, index) => {
+        if (index >= startIndex && index < endIndex) {
+            card.style.display = 'block';
         } else {
-            indicator.classList.remove('active');
+            card.style.display = 'none';
         }
     });
 }
 
-// Initial call to set up the slider
-slideTo(currentSlide);
+// Event listener for the previous button
+prevBtn.addEventListener('click', function() {
+    currentPage = Math.max(0, currentPage - 1);
+    showPage(currentPage);
+});
+
+// Event listener for the next button
+nextBtn.addEventListener('click', function() {
+    let totalPages = Math.ceil(document.querySelectorAll('.card').length / cardsPerPage);
+    console.log('Total Pages:', totalPages);
+    currentPage = Math.min(totalPages - 1, currentPage + 1);
+    console.log('Current Page:', currentPage);
+    showPage(currentPage);
+});
+
+
+// Initial call to show the first page of cards
+showPage(currentPage);

@@ -5,16 +5,16 @@ const jobs = [
       details:
         "Responsible for designing, developing and maintaining renewable energy systems such as solar, wind, or hydroelectric power.",
       openPositions: "2",
-      link: "#",
+      link: "appform.html",
     },
   
     {
-      title: "Environmental Scientist",
-      image: "images/data-solid-60.png",
+      title: "Carbon Offset Analyst",
+      image: "images/analyst.png",
       details:
-        "Research and analyze environmental issues, including the impact of climate change, and propose sustainable solutions.",
-      openPositions: "3",
-      link: "#",
+        "Assess and analyze carbon emissions, and develop strategies for companies to offset their carbon footprint.",
+      openPositions: "1",
+      link: "appform.html",
     },
     {
       title: "Environmental Scientist",
@@ -22,7 +22,7 @@ const jobs = [
       details:
         "Research and analyze environmental issues, including the impact of climate change, and propose sustainable solutions.",
       openPositions: "3",
-      link: "#",
+      link: "appform.html",
     },
   
     {
@@ -31,7 +31,7 @@ const jobs = [
       details:
         "Work on promoting sustainable farming practices, optimizing crop yield, and minimizing environmental impact.",
       openPositions: "1",
-      link: "#",
+      link: "appform.html",
     },
   
     {
@@ -40,7 +40,7 @@ const jobs = [
       details:
         "Assess and model the effects of climate change, analyze data, and develop strategies for mitigation and adaptation.",
       openPositions: "1",
-      link: "#",
+      link: "appform.html",
     },
   
     {
@@ -49,7 +49,7 @@ const jobs = [
       details:
         "Advise businesses and organizations on how to improve energy efficiency and reduce their carbon footprint. ",
       openPositions: "4",
-      link: "#",
+      link: "appform.html",
     },
   
     {
@@ -58,7 +58,7 @@ const jobs = [
       details:
         "Oversee the planning and implementation of renewable energy projects, ensuring they meet environmental standards",
       openPositions: "1",
-      link: "#",
+      link: "appform.html",
     },
     {
       title: "Water Resource Engineer",
@@ -66,7 +66,7 @@ const jobs = [
       details:
         "Develop sustainable water management solutions, considering the impact of climate change on water resources.",
       openPositions: "1",
-      link: "#",
+      link: "appform.html",
     },
     {
       title: "Carbon Offset Analyst",
@@ -74,84 +74,87 @@ const jobs = [
       details:
         "Assess and analyze carbon emissions, and develop strategies for companies to offset their carbon footprint.",
       openPositions: "1",
-      link: "#",
+      link: "appform.html",
     },
-    // {
-    //   title: "Organic Farm Manager",
-    //   image: "images/manager.png",
-    //   details:
-    //     "Manage and operate organic farms, implementing sustainable and environmentally friendly farming practices.",
-    //   openPositions: "1",
-    //   link: "#",
-    // },
+    {
+      title: "Organic Farm Manager",
+      image: "images/manager.png",
+      details:
+        "Manage and operate organic farms, implementing sustainable and environmentally friendly farming practices.",
+      openPositions: "1",
+      link: "appform.html",
+    },
   ];
   
   const jobsHeading = document.querySelector(".jobs-list-container h2");
-  let jobsContainer = document.querySelector(".jobs-list-container .jobs");
-  const jobSearch = document.querySelector(".jobs-list-container .job-search");
-  
-  let searchTerm = "";
-  
-  if (jobs.length == 1) {
+let jobsContainer = document.querySelector(".jobs-list-container .jobs");
+const jobSearch = document.querySelector(".jobs-list-container .job-search");
+
+let searchTerm = "";
+let showMore = false; // Start with showing only 8 jobs
+
+const showMoreBtn = document.getElementById('showMoreBtn');
+showMoreBtn.addEventListener("click", function() {
+    showMore = !showMore; // Toggle the showMore state
+    createJobListingCards(); // Re-render the jobs based on the new state
+});
+
+if (jobs.length == 1) {
     jobsHeading.innerHTML = `${jobs.length} Job`;
-  } else {
+} else {
     jobsHeading.innerHTML = `${jobs.length} Jobs`;
-  }
-  
-  const createJobListingCards = () => {
+}
+
+const createJobListingCards = () => {
     jobsContainer.innerHTML = "";
-  
+    
     jobs.forEach((job, index) => {
-      if (index > 7 )  return;
-      if (job.title.toLowerCase().includes(searchTerm.toLowerCase())) {
-        let jobCard = document.createElement("div");
-        jobCard.classList.add("job");
-  
-        let image = document.createElement("img");
-        image.src = job.image;
-  
-        let title = document.createElement("h3");
-        title.innerHTML = job.title;
-        title.classList.add("job-title");
-  
-        let details = document.createElement("div");
-        details.innerHTML = job.details;
-        details.classList.add("details");
-  
-        let detailsBtn = document.createElement("a");
-        detailsBtn.href = job.link;
-        detailsBtn.innerHTML = "More Details";
-        detailsBtn.classList.add("details-btn");
-  
-        let openPositions = document.createElement("span");
-        openPositions.classList.add("open-positions");
-  
-        if (job.openPositions == 1) {
-          openPositions.innerHTML = `${job.openPositions} open position`;
-        } else {
-          openPositions.innerHTML = `${job.openPositions} open positions`;
+        // Only show the first 8 jobs by default, or all jobs if showMore is true
+        if (!showMore && index >= 8) return;
+
+        if (job.title.toLowerCase().includes(searchTerm.toLowerCase())) {
+            let jobCard = document.createElement("div");
+            jobCard.classList.add("job");
+
+            let image = document.createElement("img");
+            image.src = job.image;
+
+            let title = document.createElement("h3");
+            title.innerHTML = job.title;
+            title.classList.add("job-title");
+
+            let details = document.createElement("div");
+            details.innerHTML = job.details;
+            details.classList.add("details");
+
+            let detailsBtn = document.createElement("a");
+            detailsBtn.href = job.link;
+            detailsBtn.innerHTML = "More Details";
+            detailsBtn.classList.add("details-btn");
+
+            let openPositions = document.createElement("span");
+            openPositions.classList.add("open-positions");
+
+            if (job.openPositions == 1) {
+                openPositions.innerHTML = `${job.openPositions} open position`;
+            } else {
+                openPositions.innerHTML = `${job.openPositions} open positions`;
+            }
+
+            jobCard.appendChild(image);
+            jobCard.appendChild(title);
+            jobCard.appendChild(details);
+            jobCard.appendChild(detailsBtn);
+            jobCard.appendChild(openPositions);
+
+            jobsContainer.appendChild(jobCard);
         }
-  
-        jobCard.appendChild(image);
-        jobCard.appendChild(title);
-        jobCard.appendChild(details);
-        jobCard.appendChild(detailsBtn);
-        jobCard.appendChild(openPositions);
-  
-        jobsContainer.appendChild(jobCard);
-      }
     });
-  };
-  
-  createJobListingCards();
-  
-  jobSearch.addEventListener("input", (e) => {
+};
+
+createJobListingCards();
+
+jobSearch.addEventListener("input", (e) => {
     searchTerm = e.target.value;
-  
     createJobListingCards();
-  });
-  
-
-
-
- 
+});

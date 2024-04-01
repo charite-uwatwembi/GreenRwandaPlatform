@@ -238,8 +238,8 @@
   margin-bottom: 20px;
  }
  
- a {
-  color: #09bf52; /* Set the link color */
+ span{
+  color: #11b65e; /* Set the link color */
   text-decoration: underline; /* Remove the underline */
   font-weight: bold; /* Make the link text bold */
  }

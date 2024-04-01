@@ -1,135 +1,152 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');  
-*{
-    margin: 0px;
-    padding: 0px;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Poppins', sans-serif; /* Change font family */
 }
-.container{
+
+.container {
     width: 100%;
-    overflow: hidden; /* Hide the overflow content */
+    overflow: hidden;
 }
-.blog-section{
+
+.blog-section {
     width: 85%;
     margin: auto;
-    
 }
-.blog-section .title{
+
+.blog-section .title {
     width: 100%;
     text-align: center;
     margin: auto;
 }
-.blog-section .title h2{
-    font-size: 25px;
-    /* font-weight: 600; */
+
+.blog-section .title h2 {
+    font-size: 2rem; /* Adjust font size */
     color: #050505;
     text-transform: uppercase;
     margin-top: 20px;
 }
-.blog-section .title p{
-    padding: 30px;
-    font-size: 18px;
-    /* margin-top: 10px; */
+
+.blog-section .title p {
+    padding: 1rem; /* Adjust padding */
+    font-size: 1.2rem; /* Adjust font size */
     color: #050505;
 }
-.cards{
-    
-    margin-left: -90px;
-    display: flex; /* Use flexbox to align cards horizontally */
-    width: max-content; /* Allow the container to grow based on content */
-    transition: transform 0.5s ease; /* Smooth transition for sliding */
-   }
- .cards .card{
-    
-    flex: 0 0 auto; /* Prevent cards from shrinking or growing */
-     width: 300px; /* Set a fixed width for each card */
-    margin-right: 20px; /* Add some space between cards */
 
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px; /* Add space between cards */
+    overflow: hidden; /* Hide overflow */
+    margin-bottom: 20px; /* Add bottom margin */
 }
-.cards .card:hover{
+
+.cards {
+    display: flex;
+    flex-wrap: nowrap; /* Keep cards in a single row */
+    transition: transform 0.5s ease; /* Smooth transition for sliding */
+}
+
+.card {
+    width: calc(33.33% - 20px); /* Adjust card width for responsiveness */
+    margin-right: 20px; /* Add right margin */
+    display: none; /* Initially hide cards */
+}
+
+.card:nth-child(-n + 3) {
+    display: block; /* Display first three cards */
+}
+
+.card:last-child {
+    margin-right: 0; /* Remove right margin from the last card */
+}
+
+.card:hover {
     transform: scale(1.03);
 }
 
-.image-section img{ 
+.image-section img {
     width: 100%;
     height: auto;
 }
-.content{
-    padding: 15px 20px;
-}
-.content h4{
-    font-size: 15px;
-    font-weight: 700;
 
-    /* line-height: 24px; */
-    /* margin-bottom: 15px; */
+.content {
+    padding: 15px; /* Adjust padding */
+}
+
+.content h4 {
+    font-size: 1rem; /* Adjust font size */
+    font-weight: 700;
     color: #2b8c44;
 }
-.content p{
-    font-size: 15px;
-    line-height: 26px;
+
+.content p {
+    font-size: 1rem; /* Adjust font size */
+    line-height: 1.6; /* Adjust line height */
     color: #050505;
 }
 
 .content .btn {
     display: inline-block;
-    padding: 30px 30px;
-    color:#16de48; /* White text */
-    text-decoration: none; /* Remove underline */
-    font-size: 16px; /* Font size */
-    position: relative; /* Position relative for the pseudo-element */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    padding: 1rem; /* Adjust padding */
+    color: #16de48;
+    text-decoration: none;
+    font-size: 1rem; /* Adjust font size */
+    position: relative;
+    transition: background-color 0.3s ease;
 }
-.content .btn:hover{
+
+.content .btn:hover {
     color: #2b8c44;
 }
 
-
 .btn::after {
-    content: " →"; /* Unicode arrow symbol */
-    position: absolute; /* Position the arrow relative to the button */
-    right: 10px; /* Adjust the position of the arrow */
-    top: 50%; /* Center the arrow vertically */
-    transform: translateY(-50%); /* Center the arrow vertically */
-    font-size: 16px; /* Adjust the size of the arrow */
-   }
-
-
-
-
+    content: " →";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem; /* Adjust font size */
+}
 
 /* Style for both buttons */
-#prevBtn, #nextBtn {
-    background-color: #4CAF50; /* Green background */
-    border: none; /* Remove default border */
-    color: white; /* White text */
-    padding: 15px 32px; /* Padding around text */
-    text-align: center; /* Center the text */
-    text-decoration: none; /* Remove underline */
-    display: inline-block; /* Display as inline-block */
-    font-size: 16px; /* Font size */
-    margin: 4px 2px; /* Margin around buttons */
-    cursor: pointer; /* Cursor pointer on hover */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
-   }
-   
-   /* Hover effect for buttons */
-   #prevBtn:hover, #nextBtn:hover {
-    background-color: #0d7b12; /* Darker green on hover */
-   }
-   
-   /* Disabled state for buttons */
-   #prevBtn:disabled, #nextBtn:disabled {
-    background-color: #ccc; /* Gray background */
-    cursor: not-allowed; /* Cursor not-allowed on hover */
-   }
-   .button-container {
-    display: flex; /* Use Flexbox */
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
-    gap: 10px; /* Optional: Add some space between the buttons */
-    
-   }
-   
+#prevBtn,
+#nextBtn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem; /* Adjust font size */
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-   
+/* Hover effect for buttons */
+#prevBtn:hover,
+#nextBtn:hover {
+    background-color: #0d7b12;
+}
+
+/* Disabled state for buttons */
+#prevBtn:disabled,
+#nextBtn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
