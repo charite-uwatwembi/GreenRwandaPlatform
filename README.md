@@ -38,6 +38,32 @@ GreenRwanda is committed to creating positive change, and our Job Creation Porta
 
 Our interactive Carbon Footprint Calculator is a valuable tool that allows users to estimate and track their individual and community carbon footprints. The calculator provides tips and suggestions to guide users in reducing their carbon footprints and adopting eco-friendly lifestyles.
 
+## Run Locally
+
+Clone the project 
+
+```bash
+  git clone https://github.com/charite-uwtawembi/GreenRwandaPlatform.git
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+Start the server
+
+```bash
+  npm start
+```
+
+Start the frontend on a development server
+
+```bash
+  http://localhost:3000
+```
+
+
 ## Getting Started
 
 To start your journey with GreenRwanda, simply visit our website [www.greenrwanda.com](https://greenrwanda.netlify.app/) and explore the features that align with your interests and goals. Sign up today to become a part of our community and contribute to the positive change we are striving to achieve.
