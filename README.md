@@ -40,6 +40,6 @@ Our interactive Carbon Footprint Calculator is a valuable tool that allows users
 
 ## Getting Started
 
-To start your journey with GreenRwanda, simply visit our website [www.greenrwanda.com](https://www.greenrwanda.com) and explore the features that align with your interests and goals. Sign up today to become a part of our community and contribute to the positive change we are striving to achieve.
+To start your journey with GreenRwanda, simply visit our website [www.greenrwanda.com](https://greenrwanda.netlify.app/) and explore the features that align with your interests and goals. Sign up today to become a part of our community and contribute to the positive change we are striving to achieve.
 
 Join us in building a sustainable and greener future for Rwanda!
