@@ -11,6 +11,7 @@ Welcome to GreenRwanda, your comprehensive online platform dedicated to fosterin
    - [News and Updates](#news-and-updates)
    - [Job Creation Portal](#job-creation-portal)
    - [Carbon Footprint Calculator](#carbon-footprint-calculator)
+   - [Contact Us](#contact-us)
 
 ## Introduction
 
